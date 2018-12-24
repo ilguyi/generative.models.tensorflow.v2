@@ -2,12 +2,12 @@
 .DS_Store
 
 # train and checkpoint folder
-./gans/train/*
+gans/train/*
 
 # ipynb_checkpoints
-./gans/.ipynb_checkpoints
+gans/.ipynb_checkpoints
 
 # result files
-./gans/*.jpg
-./gans/*.png
-./gans/*.gif
+gans/*.jpg
+gans/*.png
+gans/*.gif
