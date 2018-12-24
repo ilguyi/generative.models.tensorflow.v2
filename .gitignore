@@ -1,0 +1,13 @@
+# .DS_Store for mac
+.DS_Store
+
+# train and checkpoint folder
+./gans/train/*
+
+# ipynb_checkpoints
+./gans/.ipynb_checkpoints
+
+# result files
+./gans/*.jpg
+./gans/*.png
+./gans/*.gif
