@@ -6,6 +6,7 @@ gans/train/*
 
 # ipynb_checkpoints
 gans/.ipynb_checkpoints
+autoregressive/.ipynb_checkpoints
 
 
 # __pycache__

@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.x style
-* Final update: 2018. 12. 25.
+* Final update: 2019. 01. 05.
 * All right reserved @ Il Gu Yi 2018
 
 This repository is a collection of various generative models (GAN, VAE, Flow based, etc)
@@ -39,6 +39,10 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 
 
+### AutoRegressive Models [with MNIST]
+
+#### Fully Visible Sigmoid Belief Networks
+* [fvsbn.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/fvsbn.ipynb)
 
 
 
