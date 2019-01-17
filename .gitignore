@@ -3,10 +3,13 @@
 
 # train and checkpoint folder
 gans/train/*
+autoregressive/train/*
+flow/train/*
 
 # ipynb_checkpoints
 gans/.ipynb_checkpoints
 autoregressive/.ipynb_checkpoints
+flow/.ipynb_checkpoints
 
 
 # __pycache__
