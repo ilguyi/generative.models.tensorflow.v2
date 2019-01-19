@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.x style
-* Final update: 2019. 01. 17..
+* Final update: 2019. 01. 20..
 * All right reserved @ Il Gu Yi 2018
 
 This repository is a collection of various generative models (GAN, VAE, Flow based, etc)
@@ -36,6 +36,16 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 <div align="center">
 <img src='https://user-images.githubusercontent.com/11681225/50414174-5f909a80-0857-11e9-8887-b32ea7f23797.gif'>
 </div>
+
+
+### Pix2Pix (Image Translation)
+* Image-to-Image Translation with Conditional Adversarial Networks [arXiv:1611.07004](https://arxiv.org/abs/1611.07004)
+* [pix2pix.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/pix2pix.ipynb)
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/51429242-195d0a00-1c50-11e9-8c11-1b19cf86eee8.gif'>
+</div>
+
+
 
 
 
