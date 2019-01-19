@@ -1,6 +1,9 @@
 # .DS_Store for mac
 .DS_Store
 
+# datasets
+datasets
+
 # train and checkpoint folder
 gans/train/*
 autoregressive/train/*
