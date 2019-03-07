@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.x style
-* Final update: 2019. 03. 07.
+* Final update: 2019. 03. 08.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Flow based, etc)
@@ -45,6 +45,11 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 <div align="center">
 <img src='https://user-images.githubusercontent.com/11681225/51429242-195d0a00-1c50-11e9-8c11-1b19cf86eee8.gif'>
 </div>
+
+
+### CycleGAN (Unpaired Image Translation)
+* Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks [arXiv:1703.10593](https://arxiv.org/abs/1703.10593)
+* [cyclegan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cyclegan.ipynb)
 
 
 
