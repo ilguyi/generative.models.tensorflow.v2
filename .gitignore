@@ -5,21 +5,17 @@
 datasets
 
 # train and checkpoint folder
-gans/train/*
-autoregressive/train/*
-flow/train/*
+*/train/*
 
 # ipynb_checkpoints
-gans/.ipynb_checkpoints
-autoregressive/.ipynb_checkpoints
-flow/.ipynb_checkpoints
+*/.ipynb_checkpoints
 
 
 # __pycache__
-gans/__pycache__
+*/__pycache__
 
 
 # result files
-gans/*.jpg
-gans/*.png
-gans/*.gif
+*/*.jpg
+*/*.png
+*/*.gif
