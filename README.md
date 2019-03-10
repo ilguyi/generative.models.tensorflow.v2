@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.x style
-* Final update: 2019. 03. 09.
+* Final update: 2019. 03. 10.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Flow based, etc)
