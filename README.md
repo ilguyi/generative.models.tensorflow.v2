@@ -27,7 +27,7 @@ implemented by TensorFlow version 2.0 style
 Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1511.06434)
 * [dcgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/dcgan.ipynb)
 <div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/54071635-9866da00-42b2-11e9-91a2-d5d5c86b949f.gif'>
+<img src='https://user-images.githubusercontent.com/11681225/54118813-43a09c00-4437-11e9-98e1-69b8668dd8c7.gif'>
 </div>
 
 
@@ -35,7 +35,7 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 * Conditional Generative Adversarial Nets [arXiv:1411.1784](https://arxiv.org/abs/1411.1784)
 * [cgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cgan.ipynb)
 <div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/50414174-5f909a80-0857-11e9-8887-b32ea7f23797.gif'>
+<img src='https://user-images.githubusercontent.com/11681225/54118866-5c10b680-4437-11e9-9908-3e98f3b8fcb3.gif'>
 </div>
 
 

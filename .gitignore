@@ -14,8 +14,8 @@ datasets
 # __pycache__
 */__pycache__
 
-
 # result files
+assets
 */*.jpg
 */*.png
 */*.gif
