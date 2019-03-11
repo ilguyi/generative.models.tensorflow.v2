@@ -55,6 +55,40 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
   plt.show()
 
 
+
+def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_size=num_examples_to_generate,
+                                    is_square=False, is_save=False, epoch=None,
+                                    checkpoint_dir=checkpoint_dir):
+  available_print_size = list(range(1, 26))
+  assert max_print_size in available_print_size
+
+  if not is_square:
+    print_images1 = sample_images1[:max_print_size, ...]
+    print_images1 = print_images1.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images1 = print_images1.swapaxes(0, 1)
+    print_images1 = print_images1.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
+
+    print_images2 = sample_images2[:max_print_size, ...]
+    print_images2 = print_images2.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images2 = print_images2.swapaxes(0, 1)
+    print_images2 = print_images2.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
+
+    print_images = np.concatenate((print_images1, print_images2), axis=0)
+     
+    plt.figure(figsize=(max_print_size, 2))
+    plt.axis('off')
+    plt.imshow(print_images, cmap='gray')
+  else:
+    print('This function is supported by `is_square=False` mode.')
+
+  if is_save and epoch is not None:
+    filepath = os.path.join(checkpoint_dir, 'image_at_epoch_{:04d}.png'.format(epoch))
+    plt.savefig(filepath)
+
+  plt.show()
+
+
+
 def display_image(epoch_no, checkpoint_dir=checkpoint_dir):
   filepath = os.path.join(checkpoint_dir, 'image_at_epoch_{:04d}.png'.format(epoch_no))
   return PIL.Image.open(filepath)
