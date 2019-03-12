@@ -19,6 +19,7 @@ class Conv(tf.keras.Model):
                               kernel_size=(kernel_size, kernel_size),
                               strides=strides,
                               padding=padding,
+                              kernel_initializer=tf.random_normal_initializer(0., 0.02),
                               use_bias=not self.apply_batchnorm)
     if self.apply_batchnorm:
       self.batchnorm = layers.BatchNormalization()
@@ -54,6 +55,7 @@ class ConvTranspose(tf.keras.Model):
                                           kernel_size=(kernel_size, kernel_size),
                                           strides=2,
                                           padding=padding,
+                                          kernel_initializer=tf.random_normal_initializer(0., 0.02),
                                           use_bias=not self.apply_batchnorm)
     if self.apply_batchnorm:
       self.batchnorm = layers.BatchNormalization()
