@@ -9,7 +9,7 @@ from tensorflow.keras import layers
 
 class Conv(tf.keras.Model):
   def __init__(self, filters, kernel_size, strides, padding='same',
-               apply_batchnorm=True, activation='relu'):
+               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=0.001):
     super(Conv, self).__init__()
     self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'leaky_relu', 'none']
@@ -22,7 +22,8 @@ class Conv(tf.keras.Model):
                               kernel_initializer=tf.random_normal_initializer(0., 0.02),
                               use_bias=not self.apply_batchnorm)
     if self.apply_batchnorm:
-      self.batchnorm = layers.BatchNormalization()
+      self.batchnorm = layers.BatchNormalization(momentum=norm_momentum,
+                                                 epsilon=norm_epsilon)
 
   def call(self, x, training=True):
     # convolution
@@ -46,7 +47,7 @@ class Conv(tf.keras.Model):
 
 class ConvTranspose(tf.keras.Model):
   def __init__(self, filters, kernel_size, padding='same',
-               apply_batchnorm=True, activation='relu'):
+               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=0.001):
     super(ConvTranspose, self).__init__()
     self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'sigmoid']
@@ -58,7 +59,8 @@ class ConvTranspose(tf.keras.Model):
                                           kernel_initializer=tf.random_normal_initializer(0., 0.02),
                                           use_bias=not self.apply_batchnorm)
     if self.apply_batchnorm:
-      self.batchnorm = layers.BatchNormalization()
+      self.batchnorm = layers.BatchNormalization(momentum=norm_momentum,
+                                                 epsilon=norm_epsilon)
 
   def call(self, x, training=True):
     # conv transpose
