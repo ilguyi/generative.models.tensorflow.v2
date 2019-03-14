@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.x style
-* Final update: 2019. 03. 10.
+* Final update: 2019. 03. 14.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Flow based, etc)
@@ -37,6 +37,25 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 <div align="center">
 <img src='https://user-images.githubusercontent.com/11681225/54118866-5c10b680-4437-11e9-9908-3e98f3b8fcb3.gif'>
 </div>
+
+
+### LSGAN
+* Least Squares Generative Adversarial Networks [arXiv:1611.04076](https://arxiv.org/abs/1611.04076)
+* [lsgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/lsgan.ipynb)
+
+
+### BiGAN
+* Adversarial Feature Learning [arXiv:1605.09782](https://arxiv.org/abs/1605.09782)
+* [bigan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/bigan.ipynb)
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/54355815-66cc8500-469d-11e9-975b-77e37a687f0f.gif'>
+</div>
+
+
+### Wasserstein GAN
+* Wasserstein GAN [arXiv:1701.07875](https://arxiv.org/abs/1701.07875)
+* [wgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/wgan.ipynb)
+
 
 
 ### Pix2Pix (Image Translation)
