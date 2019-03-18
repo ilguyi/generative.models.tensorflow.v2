@@ -46,7 +46,7 @@ class Conv(tf.keras.Model):
 
 
 class ConvTranspose(tf.keras.Model):
-  def __init__(self, filters, kernel_size, strides, padding='same',
+  def __init__(self, filters, kernel_size, strides=2, padding='same',
                activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=0.001):
     super(ConvTranspose, self).__init__()
     self.apply_batchnorm = apply_batchnorm
