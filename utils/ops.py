@@ -9,7 +9,7 @@ from tensorflow.keras import layers
 
 class Conv(tf.keras.Model):
   def __init__(self, filters, kernel_size, strides, padding='same',
-               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=0.001):
+               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5):
     super(Conv, self).__init__()
     self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'leaky_relu', 'none']
@@ -47,7 +47,7 @@ class Conv(tf.keras.Model):
 
 class ConvTranspose(tf.keras.Model):
   def __init__(self, filters, kernel_size, strides=2, padding='same',
-               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=0.001):
+               activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5):
     super(ConvTranspose, self).__init__()
     self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'sigmoid', 'none']
