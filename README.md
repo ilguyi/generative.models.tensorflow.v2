@@ -76,9 +76,9 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 
 
-### AutoRegressive Models [with MNIST]
+### Latent Variable Models [with MNIST]
 
-#### AutoEncoder
+#### AutoEncoder (actually not generative model)
 * [autoencoder.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/latentvariable/autoencoder.ipynb)
 <div align="center">
 <img src='https://user-images.githubusercontent.com/11681225/55270473-55f95180-52e2-11e9-8671-bd12983d53f4.gif'>
