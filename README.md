@@ -87,8 +87,9 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 #### Denosing AutoEncoder
 * [dae.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/latentvariable/dae.ipynb)
-
-
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/55270736-0ae13d80-52e6-11e9-9ca1-a6310336db7a.gif'>
+</div>
 
 
 ### AutoRegressive Models [with MNIST]
