@@ -22,12 +22,18 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
                                 checkpoint_dir=checkpoint_dir):
   available_print_size = list(range(1, 26))
   assert max_print_size in available_print_size
+  if len(sample_images.shape) == 2:
+    size = int(np.sqrt(sample_images.shape[1]))
+  elif len(sample_images.shape) > 2:
+    size = sample_images.shape[1]
+  else:
+    ValueError('Not valid a shape of sample_images')
   
   if not is_square:
     print_images = sample_images[:max_print_size, ...]
-    print_images = print_images.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images = print_images.reshape([max_print_size, size, size])
     print_images = print_images.swapaxes(0, 1)
-    print_images = print_images.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
+    print_images = print_images.reshape([size, max_print_size * size])
 
     fig = plt.figure(figsize=(max_print_size, 1))
     plt.imshow(print_images, cmap='gray')
@@ -37,10 +43,10 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
     num_columns = int(np.sqrt(max_print_size))
     max_print_size = int(num_columns**2)
     print_images = sample_images[:max_print_size, ...]
-    print_images = print_images.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images = print_images.reshape([max_print_size, size, size])
     print_images = print_images.swapaxes(0, 1)
-    print_images = print_images.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
-    print_images = [print_images[:,i*MNIST_SIZE*num_columns:(i+1)*MNIST_SIZE*num_columns] for i in range(num_columns)]
+    print_images = print_images.reshape([size, max_print_size * size])
+    print_images = [print_images[:,i*size*num_columns:(i+1)*size*num_columns] for i in range(num_columns)]
     print_images = np.concatenate(tuple(print_images), axis=0)
     
     fig = plt.figure(figsize=(num_columns, num_columns))
@@ -62,16 +68,23 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
   available_print_size = list(range(1, 26))
   assert max_print_size in available_print_size
 
+  if len(sample_images1.shape) == 2:
+    size = int(np.sqrt(sample_images1.shape[1]))
+  elif len(sample_images1.shape) > 2:
+    size = sample_images1.shape[1]
+  else:
+    ValueError('Not valid a shape of sample_images')
+  
   if not is_square:
     print_images1 = sample_images1[:max_print_size, ...]
-    print_images1 = print_images1.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images1 = print_images1.reshape([max_print_size, size, size])
     print_images1 = print_images1.swapaxes(0, 1)
-    print_images1 = print_images1.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
+    print_images1 = print_images1.reshape([size, max_print_size * size])
 
     print_images2 = sample_images2[:max_print_size, ...]
-    print_images2 = print_images2.reshape([max_print_size, MNIST_SIZE, MNIST_SIZE])
+    print_images2 = print_images2.reshape([max_print_size, size, size])
     print_images2 = print_images2.swapaxes(0, 1)
-    print_images2 = print_images2.reshape([MNIST_SIZE, max_print_size * MNIST_SIZE])
+    print_images2 = print_images2.reshape([size, max_print_size * size])
 
     print_images = np.concatenate((print_images1, print_images2), axis=0)
      
