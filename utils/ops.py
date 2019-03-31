@@ -82,3 +82,37 @@ class ConvTranspose(tf.keras.Model):
 
 
 
+class Dense(tf.keras.Model):
+  def __init__(self, units, activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5):
+    super(Dense, self).__init__()
+    self.apply_batchnorm = apply_batchnorm
+    assert activation in ['relu', 'leaky_relu', 'none']
+    self.activation = activation
+
+    self.dense = layers.Dense(units=units,
+                              kernel_initializer=tf.random_normal_initializer(0., 0.02),
+                              use_bias=not self.apply_batchnorm)
+    if self.apply_batchnorm:
+      self.batchnorm = layers.BatchNormalization(momentum=norm_momentum,
+                                                 epsilon=norm_epsilon)
+
+  def call(self, x, training=True):
+    # dense
+    x = self.dense(x)
+
+    # batchnorm
+    if self.apply_batchnorm:
+      x = self.batchnorm(x, training=training)
+
+    # activation
+    if self.activation == 'relu':
+      x = tf.nn.relu(x)
+    elif self.activation == 'leaky_relu':
+      x = tf.nn.leaky_relu(x)
+    else:
+      pass
+
+    return x
+
+
+
