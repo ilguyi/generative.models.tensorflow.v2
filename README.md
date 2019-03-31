@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 03. 30.
+* Final update: 2019. 04. 01.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -37,27 +37,32 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 * Conditional Generative Adversarial Nets [arXiv:1411.1784](https://arxiv.org/abs/1411.1784)
 * [cgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cgan.ipynb)
 <div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/54118866-5c10b680-4437-11e9-9908-3e98f3b8fcb3.gif'>
+<img src='https://user-images.githubusercontent.com/11681225/55290776-80e2c300-5412-11e9-8ff8-340097be2375.gif'>
 </div>
 
 
 #### LSGAN
 * Least Squares Generative Adversarial Networks [arXiv:1611.04076](https://arxiv.org/abs/1611.04076)
 * [lsgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/lsgan.ipynb)
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/55290789-a7a0f980-5412-11e9-808f-d176012ca56c.gif'>
+</div>
 
 
 #### BiGAN
 * Adversarial Feature Learning [arXiv:1605.09782](https://arxiv.org/abs/1605.09782)
 * [bigan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/bigan.ipynb)
 <div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/54355815-66cc8500-469d-11e9-975b-77e37a687f0f.gif'>
+<img src='https://user-images.githubusercontent.com/11681225/55290791-b8ea0600-5412-11e9-8683-57b84f1052c7.gif'>
 </div>
 
 
 #### Wasserstein GAN
 * Wasserstein GAN [arXiv:1701.07875](https://arxiv.org/abs/1701.07875)
 * [wgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/wgan.ipynb)
-
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/55290796-ce5f3000-5412-11e9-9618-36472625e2c3.gif'>
+</div>
 
 
 #### Pix2Pix (Image Translation)
@@ -71,7 +76,6 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 #### CycleGAN (Unpaired Image Translation)
 * Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks [arXiv:1703.10593](https://arxiv.org/abs/1703.10593)
 * [cyclegan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cyclegan.ipynb)
-
 
 
 
@@ -96,11 +100,12 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 #### Fully Visible Sigmoid Belief Networks
 * [fvsbn.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/fvsbn.ipynb)
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/55290822-18481600-5413-11e9-92ed-05e494c0b877.gif'>
+</div>
 
 
-
-
-### Flow based Models [with MNIST]
+### Normalizing Flow Models [with MNIST]
 
 #### NICE: Non-Linear Independent Components Estimation
 * [nice.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/flow/nice.ipynb)
