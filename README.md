@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 04. 01.
+* Final update: 2019. 04. 03.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -101,7 +101,16 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 #### Fully Visible Sigmoid Belief Networks
 * [fvsbn.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/fvsbn.ipynb)
 <div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55290822-18481600-5413-11e9-92ed-05e494c0b877.gif'>
+<img src='https://user-images.githubusercontent.com/11681225/55416175-43646e00-55a9-11e9-9512-97970027e7fa.gif'>
+
+</div>
+
+
+#### Neural Autoregressive Density Estimation
+* Neural Autoregressive Distribution Estimation [arXiv:1605.02226](https://arxiv.org/abs/1605.02226)
+* [nade.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/nade.ipynb)
+<div align="center">
+<img src='https://user-images.githubusercontent.com/11681225/55416194-4d866c80-55a9-11e9-8ffe-ed7d3de47d31.gif'>
 </div>
 
 
