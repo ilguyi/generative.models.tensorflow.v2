@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 04. 03.
+* Final update: 2019. 04. 05.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -125,3 +125,5 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 Il Gu Yi
 
 
+### Slides
+[Notion link](https://www.notion.so/Generative-models-4331d990702d40159cb163ff070f44e7)
