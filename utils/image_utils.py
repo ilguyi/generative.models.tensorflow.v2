@@ -13,7 +13,7 @@ import imageio
 
 
 MNIST_SIZE = 28
-num_examples_to_generate = 16
+num_examples_to_generate = 25
 checkpoint_dir = './train'
 
 
@@ -113,7 +113,7 @@ def generate_gif(gif_filename, checkpoint_dir=checkpoint_dir):
     filenames = glob.glob(os.path.join(checkpoint_dir, 'image*.png'))
     filenames = sorted(filenames)
     last = -1
-    for i,filename in enumerate(filenames):
+    for i, filename in enumerate(filenames):
       frame = 2*(i**0.5)
       if round(frame) > round(last):
         last = frame

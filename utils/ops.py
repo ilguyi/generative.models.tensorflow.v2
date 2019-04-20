@@ -50,7 +50,7 @@ class ConvTranspose(tf.keras.Model):
                activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5):
     super(ConvTranspose, self).__init__()
     self.apply_batchnorm = apply_batchnorm
-    assert activation in ['relu', 'sigmoid', 'none']
+    assert activation in ['relu', 'sigmoid', 'tanh', 'none']
     self.activation = activation
     self.up_conv = layers.Conv2DTranspose(filters=filters,
                                           kernel_size=(kernel_size, kernel_size),
@@ -75,6 +75,8 @@ class ConvTranspose(tf.keras.Model):
       x = tf.nn.relu(x)
     elif self.activation == 'sigmoid':
       x = tf.nn.sigmoid(x)
+    elif self.activation == 'tanh':
+      x = tf.nn.tanh(x)
     else:
       pass
     
