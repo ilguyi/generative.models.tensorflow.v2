@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 04. 09.
+* Final update: 2019. 04. 20.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -9,7 +9,7 @@ implemented by TensorFlow version 2.0 style
 ## Getting Started
 
 ### Prerequisites
-* [`TensorFlow`](https://www.tensorflow.org) above 1.13
+* [`TensorFlow`](https://www.tensorflow.org) 2.0
 * Python 3.6
 * Python libraries:
   * `numpy`, `matplotlib`, `PIL`, `imageio`
