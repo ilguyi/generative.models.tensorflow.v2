@@ -29,7 +29,7 @@ implemented by TensorFlow version 2.0 style
 Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1511.06434)
 * [dcgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/dcgan.ipynb)
 *MNIST* | *Fashion MNIST*
-:---: | :---: |
+| :---: | :---: |
 <img src='https://user-images.githubusercontent.com/11681225/56466492-f3612480-644d-11e9-9e8f-0e3a63b5036d.gif'> | <img src='https://user-images.githubusercontent.com/11681225/56466506-0f64c600-644e-11e9-8ff9-4d003285a234.gif'>
 
 
