@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 04. 20.
+* Final update: 2019. 04. 21.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -28,9 +28,9 @@ implemented by TensorFlow version 2.0 style
 * Unsupervised Representation Learning with Deep Convolutional
 Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1511.06434)
 * [dcgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/dcgan.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/54118813-43a09c00-4437-11e9-98e1-69b8668dd8c7.gif'>
-</div>
+*MNIST* | *Fashion MNIST*
+:---: | :---: |
+<img src='https://user-images.githubusercontent.com/11681225/56466492-f3612480-644d-11e9-9e8f-0e3a63b5036d.gif'> | <img src='https://user-images.githubusercontent.com/11681225/56466506-0f64c600-644e-11e9-8ff9-4d003285a234.gif'>
 
 
 #### Conditional GAN
