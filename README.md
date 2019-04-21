@@ -38,6 +38,7 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 * Conditional Generative Adversarial Nets [arXiv:1411.1784](https://arxiv.org/abs/1411.1784)
 * [cgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cgan.ipynb)
 
+| | |
 |---|---|
 | *MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466681-c7df3980-644f-11e9-9bba-334bdf73e496.gif'> |
 | *Fashion MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466680-c746a300-644f-11e9-8b00-1907712f14d7.gif'> |
@@ -56,6 +57,7 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 * Adversarial Feature Learning [arXiv:1605.09782](https://arxiv.org/abs/1605.09782)
 * [bigan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/bigan.ipynb)
 
+| | |
 |---|---|
 | *MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466717-4a67f900-6450-11e9-9f3c-64939d1c31b6.gif'> |
 | *Fashion MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466716-4a67f900-6450-11e9-9035-1547ed4a9d59.gif'> |
@@ -67,8 +69,7 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 | *MNIST* | *Fashion MNIST* |
 |---|---|
-| <img src='https://user-images.githubusercontent.com/11681225/56466733-77b4a700-6450-11e9-860f-39c8f7acfb83.gif'>
-| <img src='https://user-images.githubusercontent.com/11681225/56466732-77b4a700-6450-11e9-804d-3c5154b68d89.gif'>
+| <img src='https://user-images.githubusercontent.com/11681225/56466733-77b4a700-6450-11e9-860f-39c8f7acfb83.gif'> | <img src='https://user-images.githubusercontent.com/11681225/56466732-77b4a700-6450-11e9-804d-3c5154b68d89.gif'> |
 
 
 
