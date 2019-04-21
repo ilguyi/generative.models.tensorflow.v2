@@ -22,7 +22,7 @@ implemented by TensorFlow version 2.0 style
 
 ## Contents
 
-### Generative Adversarial Networks (GANs) [with MNIST]
+### Generative Adversarial Networks (GANs) [with MNIST and Fashion MNIST]
 
 #### DCGAN (Deep Convolutional GAN)
 * Unsupervised Representation Learning with Deep Convolutional
@@ -37,33 +37,39 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 #### Conditional GAN
 * Conditional Generative Adversarial Nets [arXiv:1411.1784](https://arxiv.org/abs/1411.1784)
 * [cgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/cgan.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55290776-80e2c300-5412-11e9-8ff8-340097be2375.gif'>
-</div>
+
+|---|---|
+| *MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466681-c7df3980-644f-11e9-9bba-334bdf73e496.gif'> |
+| *Fashion MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466680-c746a300-644f-11e9-8b00-1907712f14d7.gif'> |
 
 
 #### LSGAN
 * Least Squares Generative Adversarial Networks [arXiv:1611.04076](https://arxiv.org/abs/1611.04076)
 * [lsgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/lsgan.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55290789-a7a0f980-5412-11e9-808f-d176012ca56c.gif'>
-</div>
+
+| *MNIST* | *Fashion MNIST* |
+|---|---|
+| <img src='https://user-images.githubusercontent.com/11681225/56466700-17be0080-6450-11e9-8b28-9338bbc2f632.gif'> | <img src='https://user-images.githubusercontent.com/11681225/56466699-17be0080-6450-11e9-920c-930a6e2f1b63.gif'> |
 
 
 #### BiGAN
 * Adversarial Feature Learning [arXiv:1605.09782](https://arxiv.org/abs/1605.09782)
 * [bigan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/bigan.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55290791-b8ea0600-5412-11e9-8683-57b84f1052c7.gif'>
-</div>
+
+|---|---|
+| *MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466717-4a67f900-6450-11e9-9f3c-64939d1c31b6.gif'> |
+| *Fashion MNIST* | <img src='https://user-images.githubusercontent.com/11681225/56466716-4a67f900-6450-11e9-9035-1547ed4a9d59.gif'> |
 
 
 #### Wasserstein GAN
 * Wasserstein GAN [arXiv:1701.07875](https://arxiv.org/abs/1701.07875)
 * [wgan.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/wgan.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55290796-ce5f3000-5412-11e9-9618-36472625e2c3.gif'>
-</div>
+
+| *MNIST* | *Fashion MNIST* |
+|---|---|
+| <img src='https://user-images.githubusercontent.com/11681225/56466733-77b4a700-6450-11e9-860f-39c8f7acfb83.gif'>
+| <img src='https://user-images.githubusercontent.com/11681225/56466732-77b4a700-6450-11e9-804d-3c5154b68d89.gif'>
+
 
 
 #### Pix2Pix (Image Translation)
