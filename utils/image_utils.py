@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+from __future__ import unicode_literals
 
 import os
 import glob
@@ -99,6 +100,45 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
     plt.savefig(filepath)
 
   plt.show()
+
+
+
+def print_or_save_sample_images_pix2pix(x, y, z, model_name, name=None,
+                                        is_save=False, epoch=None, checkpoint_dir=checkpoint_dir):
+  #plt.figure(figsize=(15, 5))
+  plt.figure(figsize=(12, 4))
+  plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
+
+  display_list = [x[0], y[0], z[0]]
+  assert model_name in ['pix2pix', 'cyclegan', 'stargan']
+  if model_name == 'pix2pix':
+    title = ['Input Image', 'Ground Truth', 'Predicted Image']
+  elif model_name == 'cyclegan':
+    assert name in ['X2Y2X', 'Y2X2Y']
+    if name == 'X2Y2X':
+      title = ['X domain', 'X -> Y', 'X -> Y -> X']
+    else:
+      title = ['Y domain', 'Y -> X', 'Y -> X -> Y']
+  else:
+    title = ['original domain', 'original -> target', 'original -> target -> original']
+
+  for i in range(3):
+    plt.subplot(1, 3, i+1)
+    plt.title(title[i])
+    # getting the pixel values between [0, 1] to plot it.
+    plt.imshow(display_list[i] * 0.5 + 0.5)
+    plt.axis('off')
+
+  if is_save and epoch is not None:
+    if name is not None:
+      filename = 'image_' + name + '_at_epoch_'
+    else:
+      filename = 'image_at_epoch_'
+    filepath = os.path.join(checkpoint_dir, filename + '{:04d}.png'.format(epoch))
+    plt.savefig(filepath)
+    
+  plt.show()
+
 
 
 
