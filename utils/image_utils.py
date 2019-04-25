@@ -102,8 +102,12 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
 
 
 
-def display_image(epoch_no, checkpoint_dir=checkpoint_dir):
-  filepath = os.path.join(checkpoint_dir, 'image_at_epoch_{:04d}.png'.format(epoch_no))
+def display_image(epoch_no, name=None, checkpoint_dir=checkpoint_dir):
+  if name is not None:
+    filename = 'image_' + name + '_at_epoch_'
+  else:
+    filename = 'image_at_epoch_'
+  filepath = os.path.join(checkpoint_dir, filename + '{:04d}.png'.format(epoch_no))
   return PIL.Image.open(filepath)
 
 
