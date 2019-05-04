@@ -12,9 +12,10 @@ class Conv(tf.keras.Model):
                activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5,
                leaky_relu_alpha=0.2, name='conv_layer'):
     super(Conv, self).__init__(name=name)
-    self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'leaky_relu', 'none']
     self.activation = activation
+    self.apply_batchnorm = apply_batchnorm
+    self.leaky_relu_alpha = leaky_relu_alpha
 
     self.conv = layers.Conv2D(filters=filters,
                               kernel_size=(kernel_size, kernel_size),
@@ -38,7 +39,7 @@ class Conv(tf.keras.Model):
     if self.activation == 'relu':
       x = tf.nn.relu(x)
     elif self.activation == 'leaky_relu':
-      x = tf.nn.leaky_relu(x, alpha=leaky_relu_alpha)
+      x = tf.nn.leaky_relu(x, alpha=self.leaky_relu_alpha)
     else:
       pass
 
@@ -51,9 +52,10 @@ class ConvTranspose(tf.keras.Model):
                activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5,
                name='conv_transpose_layer'):
     super(ConvTranspose, self).__init__(name=name)
-    self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'sigmoid', 'tanh', 'none']
     self.activation = activation
+    self.apply_batchnorm = apply_batchnorm
+
     self.up_conv = layers.Conv2DTranspose(filters=filters,
                                           kernel_size=(kernel_size, kernel_size),
                                           strides=strides,
@@ -90,9 +92,10 @@ class Dense(tf.keras.Model):
   def __init__(self, units, activation='relu', apply_batchnorm=True, norm_momentum=0.9, norm_epsilon=1e-5,
                leaky_relu_alpha=0.2, name='dense_layer'):
     super(Dense, self).__init__(name=name)
-    self.apply_batchnorm = apply_batchnorm
     assert activation in ['relu', 'leaky_relu', 'none']
     self.activation = activation
+    self.apply_batchnorm = apply_batchnorm
+    self.leaky_relu_alpha = leaky_relu_alpha
 
     self.dense = layers.Dense(units=units,
                               kernel_initializer=tf.random_normal_initializer(0., 0.02),
@@ -113,7 +116,7 @@ class Dense(tf.keras.Model):
     if self.activation == 'relu':
       x = tf.nn.relu(x)
     elif self.activation == 'leaky_relu':
-      x = tf.nn.leaky_relu(x, alpha=leaky_relu_alpha)
+      x = tf.nn.leaky_relu(x, alpha=self.leaky_relu_alpha)
     else:
       pass
 
