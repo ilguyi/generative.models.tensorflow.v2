@@ -111,17 +111,19 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 
 #### Fully Visible Sigmoid Belief Networks
 * [fvsbn.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/fvsbn.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55416175-43646e00-55a9-11e9-9512-97970027e7fa.gif'>
-</div>
+
+| *MNIST* | *Fashion MNIST* |
+|---|---|
+| <img src='https://user-images.githubusercontent.com/11681225/57566483-068d6180-7408-11e9-9b92-6781e6ceb4af.gif'> | <img src='https://user-images.githubusercontent.com/11681225/57566471-eb225680-7407-11e9-85f5-04b7258d9b83.gif'> |
 
 
 #### Neural Autoregressive Density Estimation
 * Neural Autoregressive Distribution Estimation [arXiv:1605.02226](https://arxiv.org/abs/1605.02226)
 * [nade.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/autoregressive/nade.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/55416194-4d866c80-55a9-11e9-8ffe-ed7d3de47d31.gif'>
-</div>
+
+| *MNIST* | *Fashion MNIST* |
+|---|---|
+| <img src='https://user-images.githubusercontent.com/11681225/57566516-50764780-7408-11e9-90f3-86ffd90ce8d2.png'> | <img src='https://user-images.githubusercontent.com/11681225/57566515-50764780-7408-11e9-919d-e5f973d8c02e.png'> |
 
 
 ### Normalizing Flow Models [with MNIST]
