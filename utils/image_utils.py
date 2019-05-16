@@ -58,8 +58,8 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
   if is_save and epoch is not None:
     filepath = os.path.join(checkpoint_dir, 'image_at_epoch_{:04d}.png'.format(epoch))
     plt.savefig(filepath)
-
-  plt.show()
+  else:
+    plt.show()
 
 
 
@@ -98,8 +98,8 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
   if is_save and epoch is not None:
     filepath = os.path.join(checkpoint_dir, 'image_at_epoch_{:04d}.png'.format(epoch))
     plt.savefig(filepath)
-
-  plt.show()
+  else:
+    plt.show()
 
 
 
@@ -136,8 +136,8 @@ def print_or_save_sample_images_pix2pix(x, y, z, model_name, name=None,
       filename = 'image_at_epoch_'
     filepath = os.path.join(checkpoint_dir, filename + '{:04d}.png'.format(epoch))
     plt.savefig(filepath)
-    
-  plt.show()
+  else:
+    plt.show()
 
 
 
