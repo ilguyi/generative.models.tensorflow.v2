@@ -1,5 +1,5 @@
 # Generative models with tensorflow version 2.0 style
-* Final update: 2019. 05. 11.
+* Final update: 2019. 05. 17.
 * All right reserved @ Il Gu Yi 2019
 
 This repository is a collection of various generative models (GAN, VAE, Normalizing flow, Autoregressive models, etc)
@@ -9,7 +9,7 @@ implemented by TensorFlow version 2.0 style
 ## Getting Started
 
 ### Prerequisites
-* [`TensorFlow`](https://www.tensorflow.org) 2.0 or above 1.13
+* [`TensorFlow`](https://www.tensorflow.org) 2.0 (except `normalizing_flow/nice.ipynb` which is based on tf version 1.13.1)
 * Python 3.6
 * Python libraries:
   * `numpy`, `matplotlib`, `PIL`, `imageio`
@@ -72,13 +72,23 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 | <img src='https://user-images.githubusercontent.com/11681225/56466733-77b4a700-6450-11e9-860f-39c8f7acfb83.gif'> | <img src='https://user-images.githubusercontent.com/11681225/56466732-77b4a700-6450-11e9-804d-3c5154b68d89.gif'> |
 
 
+#### WGAN-GP
+* Improved Training of Wasserstein GANs [arXiv:1704.00028](https://arxiv.org/abs/1704.00028)
+* [wgan-gp.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/wgan-gp.ipynb)
+
+| *MNIST* | *Fashion MNIST* |
+|---|---|
+| <img src='https://user-images.githubusercontent.com/11681225/57909461-ccb3d380-78bd-11e9-958a-0b3f981a4a95.gif'> | <img src='https://user-images.githubusercontent.com/11681225/57909460-ccb3d380-78bd-11e9-9cd8-2af7d9b9097f.gif'> |
+
 
 #### Pix2Pix (Image Translation)
 * Image-to-Image Translation with Conditional Adversarial Networks [arXiv:1611.07004](https://arxiv.org/abs/1611.07004)
 * [pix2pix.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/gans/pix2pix.ipynb)
-<div align="center">
-<img src='https://user-images.githubusercontent.com/11681225/51429242-195d0a00-1c50-11e9-8c11-1b19cf86eee8.gif'>
-</div>
+
+| | |
+|---|---|
+| *facades* | <img src='https://user-images.githubusercontent.com/11681225/51429242-195d0a00-1c50-11e9-8c11-1b19cf86eee8.gif'> |
+| *cityspaces* | <img src='https://user-images.githubusercontent.com/11681225/57904678-cec26600-78ae-11e9-830d-2a0e20948dcb.gif'> |
 
 
 #### CycleGAN (Unpaired Image Translation)
@@ -129,7 +139,7 @@ Generative Adversarial Networks paper [arXiv:1511.06434](https://arxiv.org/abs/1
 ### Normalizing Flow Models [with MNIST]
 
 #### NICE: Non-Linear Independent Components Estimation
-* [nice.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/flow/nice.ipynb)
+* [nice.ipynb](https://nbviewer.jupyter.org/github/ilguyi/generative.models.tensorflow.v2/blob/master/normalizing_flow/nice.ipynb)
 
 
 
