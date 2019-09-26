@@ -37,6 +37,8 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
     print_images = print_images.reshape([max_print_size, size, size, channel])
     print_images = print_images.swapaxes(0, 1)
     print_images = print_images.reshape([size, max_print_size * size, channel])
+    if channel == 1:
+      print_images = np.squeeze(print_images, axis=-1)
 
     fig = plt.figure(figsize=(max_print_size, 1))
     plt.imshow(print_images * 0.5 + 0.5)#, cmap='gray')
@@ -51,6 +53,8 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
     print_images = print_images.reshape([size, max_print_size * size, channel])
     print_images = [print_images[:,i*size*num_columns:(i+1)*size*num_columns] for i in range(num_columns)]
     print_images = np.concatenate(tuple(print_images), axis=0)
+    if channel == 1:
+      print_images = np.squeeze(print_images, axis=-1)
     
     fig = plt.figure(figsize=(num_columns, num_columns))
     plt.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
@@ -91,6 +95,8 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
     print_images2 = print_images2.reshape([size, max_print_size * size, channel])
 
     print_images = np.concatenate((print_images1, print_images2), axis=0)
+    if channel == 1:
+      print_images = np.squeeze(print_images, axis=-1)
      
     plt.figure(figsize=(max_print_size, 2))
     plt.axis('off')

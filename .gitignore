@@ -1,21 +1,24 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
 # .DS_Store for mac
 .DS_Store
 
 # datasets
-datasets
+datasets/
 
 # train and checkpoint folder
-*/train/*
-
-# ipynb_checkpoints
-*/.ipynb_checkpoints
-
-
-# __pycache__
-*/__pycache__
+train/
 
 # result files
-assets
-*/*.jpg
-*/*.png
-*/*.gif
+assets/
+*.jpg
+*.png
+*.gif
