@@ -26,6 +26,7 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
   assert max_print_size in available_print_size
   if len(sample_images.shape) == 2:
     size = int(np.sqrt(sample_images.shape[1]))
+    channel = 1
   elif len(sample_images.shape) > 2:
     size = sample_images.shape[1]
     channel = sample_images.shape[3]
@@ -68,7 +69,6 @@ def print_or_save_sample_images(sample_images, max_print_size=num_examples_to_ge
     plt.show()
 
 
-
 def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_size=num_examples_to_generate,
                                     is_square=False, is_save=False, epoch=None,
                                     checkpoint_dir=checkpoint_dir):
@@ -77,6 +77,7 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
 
   if len(sample_images1.shape) == 2:
     size = int(np.sqrt(sample_images1.shape[1]))
+    channel = 1
   elif len(sample_images1.shape) > 2:
     size = sample_images1.shape[1]
     channel = sample_images1.shape[3]
@@ -109,7 +110,6 @@ def print_or_save_sample_images_two(sample_images1, sample_images2, max_print_si
     plt.savefig(filepath)
   else:
     plt.show()
-
 
 
 def print_or_save_sample_images_pix2pix(x, y, z, model_name, name=None,
@@ -149,8 +149,6 @@ def print_or_save_sample_images_pix2pix(x, y, z, model_name, name=None,
     plt.show()
 
 
-
-
 def display_image(epoch_no, name=None, checkpoint_dir=checkpoint_dir):
   if name is not None:
     filename = 'image_' + name + '_at_epoch_'
@@ -158,7 +156,6 @@ def display_image(epoch_no, name=None, checkpoint_dir=checkpoint_dir):
     filename = 'image_at_epoch_'
   filepath = os.path.join(checkpoint_dir, filename + '{:04d}.png'.format(epoch_no))
   return PIL.Image.open(filepath)
-
 
 
 def generate_gif(gif_filename, checkpoint_dir=checkpoint_dir):
@@ -181,5 +178,3 @@ def generate_gif(gif_filename, checkpoint_dir=checkpoint_dir):
   filename_to_copy = gif_filename + '.png'
   print('cp {} {}'.format(gif_filename, filename_to_copy))
   os.system('cp {} {}'.format(gif_filename, filename_to_copy))
-
-
